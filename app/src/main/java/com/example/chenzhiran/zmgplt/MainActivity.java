@@ -1,13 +1,10 @@
 package com.example.chenzhiran.zmgplt;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import static com.example.chenzhiran.zmgplt.R.id.like_layout_imageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,22 +19,24 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, ProductActivity.class);
                     startActivity(intent);
                     break;
-                case R.id.like_layout_imageButton:
+
+                case R.id.like_button:
+                    Intent intent1 = new Intent(MainActivity.this, MyActivity.class);
                     startActivity(intent1);
                     break;
+
             }
         }
     };
 
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mProductButton = (Button)findViewById(R.id.product_button);
-        mMyButton = (Button)findViewById(like_layout_imageButton);
+        mMyButton = (Button)findViewById(R.id.like_button);
 
         mProductButton.setOnClickListener(mOnClickListener);
         mMyButton.setOnClickListener(mOnClickListener);

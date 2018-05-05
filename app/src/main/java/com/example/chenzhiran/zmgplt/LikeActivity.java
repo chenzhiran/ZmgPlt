@@ -1,4 +1,8 @@
 package com.example.chenzhiran.zmgplt;
 
-class LikeActivity {
+import android.support.v7.app.AppCompatActivity;
+
+class LikeActivity extends AppCompatActivity {
+
+
 }

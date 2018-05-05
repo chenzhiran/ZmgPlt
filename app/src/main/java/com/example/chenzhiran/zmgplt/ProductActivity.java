@@ -1,6 +1,5 @@
 package com.example.chenzhiran.zmgplt;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,11 +22,11 @@ public class ProductActivity extends AppCompatActivity {
         }
     };
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+
         mProductLinkButton = (Button)findViewById(R.id.product_linkButton);
         mProductLinkButton.setOnClickListener(mOnClickListener);
 
