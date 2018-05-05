@@ -117,6 +117,13 @@
                 android:text="ceshi"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="54dp" />
+
+            <Button
+                android:id="@+id/product_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
             <EditText
                 android:id="@+id/editText12211"
                 android:layout_width="321dp"
