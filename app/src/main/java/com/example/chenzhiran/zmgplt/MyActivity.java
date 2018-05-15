@@ -15,7 +15,7 @@ class MyActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()) {
                 case R.id.order_button:
-                    Intent intent = new Intent(MyActivity.this, OrderActivity.class);
+                    Intent intent = new Intent(MyActivity.this, MainActivity.class);
                     startActivity(intent);
                     break;
             }
@@ -26,7 +26,7 @@ class MyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.activity_my);
 
         mProductOrderButton = (Button)findViewById(R.id.order_button);
         mProductOrderButton.setOnClickListener(mOnClickListener);

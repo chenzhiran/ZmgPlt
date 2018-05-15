@@ -1,11 +1,14 @@
 package com.example.chenzhiran.zmgplt;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,23 +16,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mProductButton;
-    private Button mMyButton;
+    private ImageButton mMyButton;
     private GridView mProductGridView;
     private List<ProductInfo> mProductInfos;
 
-
+    //跳转到我的页面，待修改
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch(v.getId()) {
-                case R.id.product_button:
-                    Intent intent = new Intent(MainActivity.this, ProductActivity.class);
-                    startActivity(intent);
-                    break;
 
-                case R.id.like_button:
-                    Intent intent1 = new Intent(MainActivity.this, MyActivity.class);
+                case R.id.like_layout_imageButton:
+                    Intent intent1 = new Intent(MainActivity.this, ProductActivity.class);
                     startActivity(intent1);
                     break;
 
@@ -43,14 +41,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mProductButton = (Button)findViewById(R.id.product_button);
-        mMyButton = (Button)findViewById(R.id.like_button);
-
-        mProductButton.setOnClickListener(mOnClickListener);
+        mMyButton = (ImageButton)this.findViewById(R.id.like_layout_imageButton);
         mMyButton.setOnClickListener(mOnClickListener);
 
         mProductGridView = (GridView) findViewById(R.id.grid_view);
-
         mProductInfos = new ArrayList<>();
         mProductInfos.add(new ProductInfo("春夏的牛仔", 121,R.drawable.timg));
         mProductInfos.add(new ProductInfo("干练风哈哈", 262,R.drawable.timg_1));
@@ -76,9 +70,29 @@ public class MainActivity extends AppCompatActivity {
         mProductGridView.setAdapter(productAdapter);
 
 
+        mProductGridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(MainActivity.this, ProductActivity.class);
+                        startActivity(intent1);
+                        break;
+
+
+
+                }
+
+            }
+        });
+
+
+
     }
-
-
-
 
 }
