@@ -44,7 +44,7 @@
             android:id="@+id/register_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:onClick = "click"
             android:text="注册" />
 
         <Button
@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/register_button"
             android:layout_below="@+id/password_editText"
+            android:onClick = "click"
             android:text="登录" />
 
     </LinearLayout>
@@ -69,6 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/register_button"
+            android:onClick = "click"
             android:text="随便看看" />
 
         <Button
@@ -78,6 +80,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/look_in_button"
             android:layout_below="@+id/login_in_button"
+            android:onClick = "click"
             android:text="忘记密码" />
 
 
