@@ -11,23 +11,24 @@
 
     <EditText
         android:id="@+id/user_editText"
+        android:background="@color/colorLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="320dp"
         android:textSize="20dp"
-        android:textColor="@color/colorTextwhite"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="用户名"/>
 
     <EditText
         android:id="@+id/password_editText"
+        android:background="@color/colorLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
-        android:textColor="@color/colorTextwhite"
+
         android:layout_marginTop="370dp"
         android:ems="10"
         android:hint="密码"
@@ -36,12 +37,16 @@
     <LinearLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_below="@+id/password_editText"
+        android:layout_marginTop="15dp"
         android:gravity="center">
 
         <Button
             android:id="@+id/register_button"
+            android:background="@color/colorGray"
+            android:textColor="@color/colorTextwhite"
+            android:layout_marginHorizontal="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick = "click"
@@ -49,6 +54,9 @@
 
         <Button
             android:id="@+id/login_in_button"
+            android:background="@color/colorGray"
+            android:textColor="@color/colorTextwhite"
+            android:layout_marginHorizontal="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/register_button"
@@ -70,6 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/register_button"
+            android:textColor="@color/colorText"
+            android:layout_marginHorizontal="10dp"
             android:onClick = "click"
             android:text="随便看看" />
 
@@ -80,6 +90,8 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/look_in_button"
             android:layout_below="@+id/login_in_button"
+            android:textColor="@color/colorText"
+            android:layout_marginHorizontal="10dp"
             android:onClick = "click"
             android:text="忘记密码" />
 

@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
     private GridView mProductGridView;
     private List<ProductInfo> mProductInfos;
 
-    //跳转到我的页面，待修改
+    //跳转到我的页面
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch(v.getId()) {
 
                 case R.id.like_layout_imageButton:
-                    Intent intent1 = new Intent(MainActivity.this, ProductActivity.class);
+                    Intent intent1 = new Intent(MainActivity.this, MyActivity.class);
                     startActivity(intent1);
                     break;
 

@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ProductActivity extends AppCompatActivity {
-    private ImageButton mProductLinkButton;
     private ImageButton mSearchButton;
-    private Button mTextbutton;
     private ImageButton mLikeButton;
 
 
@@ -22,9 +20,6 @@ public class ProductActivity extends AppCompatActivity {
                     Intent intent1 = new Intent(ProductActivity.this, MainActivity.class);
                     startActivity(intent1);
                     break;
-                case R.id.product_linkButton:
-                    Intent intent2 = new Intent(ProductActivity.this, PurchaseActivity.class);
-                    startActivity(intent2);
                 case R.id.like_layout_imageButton1:
                     Intent intent3 = new Intent(ProductActivity.this, MyActivity.class);
                     startActivity(intent3);
@@ -40,11 +35,10 @@ public class ProductActivity extends AppCompatActivity {
 
         mSearchButton = (ImageButton)this.findViewById(R.id.search_layout_imageButton1);
         mLikeButton = this.findViewById(R.id.like_layout_imageButton1);
-        mTextbutton = findViewById(R.id.product_linkButton);
 
         mSearchButton.setOnClickListener(mOnClickListener);
         mLikeButton.setOnClickListener(mOnClickListener);
-        mTextbutton.setOnClickListener(mOnClickListener);
+
 
     }
 }

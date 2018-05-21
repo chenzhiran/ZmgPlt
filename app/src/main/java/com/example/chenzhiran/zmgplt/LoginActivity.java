@@ -19,6 +19,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText editText1;
     private EditText editText2;
+    private Button lookInbutton;
+    private Button forgetPasswordButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         editText1 = (EditText) findViewById(R.id.user_editText);
+        editText1.getBackground().setAlpha(150);
         editText2 = (EditText) findViewById(R.id.password_editText);
+        editText2.getBackground().setAlpha(150);
+
+        lookInbutton = (Button) findViewById(R.id.look_in_button);
+        lookInbutton.getBackground().setAlpha(0);
+        forgetPasswordButton = (Button) findViewById(R.id.forget_password_button);
+        forgetPasswordButton.getBackground().setAlpha(0);
+
     }
 
     public void click(View v)

@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderActivity extends AppCompatActivity {
+public class MyLikeActivity extends AppCompatActivity{
     private ImageButton mMyButton;
     private GridView mProductGridView;
     private List<ProductInfo> mProductInfos;
@@ -24,8 +24,8 @@ public class OrderActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()) {
 
-                case R.id.like_layout_imageButton2:
-                    Intent intent1 = new Intent(OrderActivity.this, MyActivity.class);
+                case R.id.like_layout_imageButton3:
+                    Intent intent1 = new Intent(MyLikeActivity.this, MyActivity.class);
                     startActivity(intent1);
                     break;
 
@@ -33,16 +33,14 @@ public class OrderActivity extends AppCompatActivity {
         }
     };
 
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_list);
+        setContentView(R.layout.activity_my_like);
 
-        mMyButton = (ImageButton)this.findViewById(R.id.like_layout_imageButton2);
+        mMyButton = (ImageButton)this.findViewById(R.id.like_layout_imageButton3);
         mMyButton.setOnClickListener(mOnClickListener);
 
-        mProductGridView = (GridView) findViewById(R.id.grid_view1);
+        mProductGridView = (GridView) findViewById(R.id.grid_view2);
         mProductInfos = new ArrayList<>();
         mProductInfos.add(new ProductInfo("春夏的牛仔", 121,R.drawable.timg));
         mProductInfos.add(new ProductInfo("干练风哈哈", 262,R.drawable.timg_1));
@@ -63,7 +61,7 @@ public class OrderActivity extends AppCompatActivity {
         mProductInfos.add(new ProductInfo("百褶学生裙", 271,R.drawable.timg_18));
         mProductInfos.add(new ProductInfo("这个网球衫", 241,R.drawable.timg_19));
 
-        final GridViewAdapter productAdapter = new GridViewAdapter(OrderActivity.this, mProductInfos);
+        final GridViewAdapter productAdapter = new GridViewAdapter(MyLikeActivity.this, mProductInfos);
 
         mProductGridView.setAdapter(productAdapter);
 
@@ -74,11 +72,11 @@ public class OrderActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
                     case 0:
-                        Intent intent = new Intent(OrderActivity.this, ProductActivity.class);
+                        Intent intent = new Intent(MyLikeActivity.this, ProductActivity.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        Intent intent1 = new Intent(OrderActivity.this, ProductActivity.class);
+                        Intent intent1 = new Intent(MyLikeActivity.this, ProductActivity.class);
                         startActivity(intent1);
                         break;
 
@@ -92,4 +90,6 @@ public class OrderActivity extends AppCompatActivity {
 
 
     }
+
+
 }

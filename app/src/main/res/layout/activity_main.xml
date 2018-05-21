@@ -5,13 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorLogin"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:id="@+id/selector"
+        android:background="@color/colorTextwhite"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="40dp"
         android:layout_alignParentTop="true">
         <TextView
             android:id="@+id/height_textView"
@@ -19,6 +24,7 @@
             android:layout_height="wrap_content"
             android:text="身高"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:gravity="center"
             android:layout_weight="1"
             android:textColor="@color/colorText"
@@ -28,6 +34,7 @@
             android:id="@+id/height_spinner"
             android:layout_width="36dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -37,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="体重"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:gravity="center"
             android:layout_weight="1"
             android:textColor="@color/colorText"
@@ -45,6 +53,7 @@
         <Spinner
             android:id="@+id/weight_spinner"
             android:layout_width="36dp"
+            android:layout_gravity="center_vertical"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="16dp" />
@@ -55,6 +64,7 @@
             android:layout_height="wrap_content"
             android:text="性别"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:gravity="center"
             android:layout_weight="1"
             android:textColor="@color/colorText"
@@ -63,6 +73,7 @@
         <Spinner
             android:id="@+id/gender_spinner"
             android:layout_width="36dp"
+            android:layout_gravity="center_vertical"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="75dp"
             tools:layout_editor_absoluteY="16dp" />
@@ -71,6 +82,10 @@
 
     <android.support.v7.widget.LinearLayoutCompat
         android:id="@+id/search"
+        android:background="@color/colorTextwhite"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/selector">
@@ -88,7 +103,8 @@
 
         <ImageButton
             android:id="@+id/search_imageButton"
-            android:layout_width="41dp"
+            android:background="@color/colorTextwhite"
+            android:layout_width="30dp"
             android:layout_height="43dp"
             app:srcCompat="@mipmap/search"
             android:scaleType="centerInside"
@@ -101,6 +117,10 @@
 
     <GridView
         android:id="@+id/grid_view"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorTextwhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/search"
@@ -113,13 +133,17 @@
 
     <LinearLayout
         android:id="@+id/bottomlayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
         <ImageButton
             android:id="@+id/search_layout_imageButton"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:background="@color/colorLogin"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             app:srcCompat="@mipmap/search"
             android:scaleType="centerInside"
@@ -127,8 +151,10 @@
             tools:layout_editor_absoluteY="54dp" />
         <ImageButton
             android:id="@+id/like_layout_imageButton"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:background="@color/colorLogin"
+            android:layout_marginHorizontal="5dp"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             app:srcCompat="@mipmap/favorite"
             android:scaleType="centerInside"

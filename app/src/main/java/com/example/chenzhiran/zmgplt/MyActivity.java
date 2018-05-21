@@ -7,16 +7,21 @@ import android.view.View;
 import android.widget.Button;
 
 
-class MyActivity extends AppCompatActivity {
+public class MyActivity extends AppCompatActivity {
     private Button mProductOrderButton;
+    private Button mMyLikeButton;
 
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch(v.getId()) {
                 case R.id.order_button:
-                    Intent intent = new Intent(MyActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MyActivity.this, OrderActivity.class);
                     startActivity(intent);
+                    break;
+                case R.id.like_button:
+                    Intent intent1 = new Intent(MyActivity.this, MyLikeActivity.class);
+                    startActivity(intent1);
                     break;
             }
 
@@ -30,6 +35,9 @@ class MyActivity extends AppCompatActivity {
 
         mProductOrderButton = (Button)findViewById(R.id.order_button);
         mProductOrderButton.setOnClickListener(mOnClickListener);
+
+        mMyLikeButton = (Button)findViewById(R.id.like_button);
+        mMyLikeButton.setOnClickListener(mOnClickListener);
 
     }
 }
